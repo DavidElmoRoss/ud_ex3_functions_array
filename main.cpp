@@ -8,12 +8,12 @@
 */
 #include "mbed.h"
 
-int MAX=80;
+int MAX=80;                             // Maximum Screen Size
 void clear(void);                       // function to clear the screen
 void position(int x, int y);            // function to position cursor
 int main(void)
 {
-    unsigned char name[80];            // Name has MAX number of characters
+    unsigned char name[MAX];            // Name has MAX number of characters
     int i,x;
     for(;;)
   {
@@ -40,7 +40,7 @@ int main(void)
     }
     name[i]='\0';                       // replace <return> with <null>
 
-   x=(80-i)/2;                          // calculate centre for name
+   x=(MAX-i)/2;                          // calculate centre for name
    position(12,x);                      // position cursor at (12,x)
    printf("%s",name);                   // print name on screen
   

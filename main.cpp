@@ -8,7 +8,7 @@
 */
 #include "mbed.h"
 
-int MAX=80;                             // Maximum Screen Size
+#define MAX 80                          // Maximum Screen Size
 void clear(void);                       // function to clear the screen
 void position(int x, int y);            // function to position cursor
 int main(void)
